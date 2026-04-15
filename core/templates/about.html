@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+<h1 class="display-4"> About Us </h1>
+    <p>skylite fitness is a co-operative fitness company that helps
+         individuals  achieve their fitness goals and also 
+        orginze fitness bootcamps for fitness driven individuals  </p> 
+
+        <section class="skylite-fitness d-flex align-items-center"> 
+
+            <div class="hero-text  col-lg-6 col-md-6 col-sm-12" >
+            <h1 class="center " > WELCOME TO SKYLITE FITNESS  </h1> 
+             <h1 class="display-3">We are the best at<br>fulfilling your potential<br>and achieving your goals.</h1>
+        <p class="hero-3">
+            Helping you stay fit, healthy and strong with personalized
+            training programs and professional guidance.
+        </p>
+
+<div class="features-pause d-flex align-items-start mg-4">
+
+  <div class="icon-img me-3">
+    <img src="{% static 'images/icon-1.png' %}"  class="img-fluid">
+  </div>
+    
+  <div class="fw-bold"> 
+    <h6> Free Fitness Training </h6>
+
+  </div>
+
+</div>
+
+        <div class="hero-buttons">
+            <a href="#" class="btn primary">Our Mission</a>
+            <a href="#" class="btn">Our Vision</a>
+           
+        </div>
+    </div>
+
+    <div class="copying-img">
+        <img src="{% static 'images/fitness-goal-banner.png' %}" alt="Trainer" class="img-fluid">
+        </div>
+        </section>
+        
+        <section class="explore-1 box-left" id="box-left"> 
+            <center>
+            <p> Explore Fitness center  </p>
+            </center>
+
+            <div  class="watch"> 
+              <a href="https://youtu.be/XckEEwa1BPI?si=0ku7xYKjM1okIz3w" class="btn-3"> Watch Video </a>
+            </div>
+        </section>
+
+        <section class="why-choose-us box-right" id="box-right"> 
+
+     <center class="trainers">
+        <h6>Our Blog</h6>
+       
+        <p class="lead"> 
+            check our blog for the latest fitness tips, workout routines, and nutrition advice
+             to help you achieve your health and wellness goals.
+        </p>
+
+        </center>
+
+    <div class="row g-4">
+        
+        {% comment %} Trainer 1 {% endcomment %}
+
+       <div class="col-lg-3 col-md-6">
+<div class="trainer-card">
+
+<img src="{% static 'images/work-1.jpg' %}" class="img-fluid">
+
+<div class="trainer-info text-center">
+<h6 class="">At home   </h6>
+<p class="">always train </p>
+</div>
+
+</div>
+</div>
+
+<!-- why-us 2 -->
+<div class="col-lg-3 col-md-6">
+<div class="trainer-card">
+
+<img src="{% static 'images/work-2.jpg' %}" class="img-fluid">
+
+
+<div class="why-us-info text-center">
+<h6 class="">full body home workout </h6>
+<p class="">always keep fit </p>
+</div>
+
+</div>
+</div>
+
+<!-- why-us 3 -->
+<div class="col-lg-3 col-md-6">
+<div class="trainer-card">
+
+<img src="{% static 'images/work-3.jpg' %}" class="img-fluid">
+
+<div class="why-us-info text-center">
+<h6 class="">Strength </h6>
+<p class="">Transform your life with our personalized fitness plans</p>
+</div>
+
+</div>
+</div>
+
+<!-- Trainer 4 -->
+<div class="col-lg-3 col-md-6">
+<div class="trainer-card">
+
+<img src="{% static 'images/feature-3.jpg' %}" class="img-fluid">
+
+
+<div class="why-us-info text-center">
+<h6 class="">mental engagement </h6>
+<p class=""> keeping fit is the right choice</p>
+</div>
+
+</div>
+</div>
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+        
+</body>
+
+{% endblock %}

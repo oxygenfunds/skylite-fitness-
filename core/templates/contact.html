@@ -1,0 +1,224 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+
+
+
+<section class="cal ">
+  <div class="row align-items-center ">
+
+    <!-- Left Side (Text / Info) -->
+    <div class=" GET col-lg-5 mb-4">
+      <h2 class="">Get In Touch</h2>
+      <p> get in touch with our team of experts for
+         personalized fitness advice, training tips, and diet
+          plans. We're here to help you achieve your health and
+           wellness goals.</p>
+      <p class="text-muted">
+        Have questions about fitness, training or diet plans? Reach out to us anytime.
+      </p>
+
+       <ul class="list-unstyled mt-4">
+        <li>📍 Enugu, Nigeria</li> <br>
+        <li>📞 +234 000 000 000</li> <br>
+        <li>📧 skylitefitness@gmail.com</li> <br>
+      </ul> 
+    </div>
+
+    <!-- Right Side (Form) -->
+    <div class="col-lg-7">
+      <div class="card-shadow p-4">
+
+        <form  id="contact-form"  method="POST"  >
+          {% csrf_token %}
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <input type="text" class="form-control" name="name" placeholder="Full Name" required>
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <input type="email" class="form-control" name="email" placeholder="Email Address" required>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <textarea class="form-control" name="message" rows="4" placeholder="Your Message"></textarea>
+          </div>
+
+          <!-- Services -->
+          <div class="mb-3">
+            <label class="fw-bold fz-3 ">Services</label>
+
+            <div class="d-flex   mt-2">
+
+             
+          <!-- Terms -->
+          <div class="form-check mb-3">
+            <input type="checkbox" class="form-check-input  "  required>
+            <label class="form-check-label">I agree to  the site privacy and policy </label>
+          </div>
+
+
+          <div id="success-msg" class="alert alert-success mt-3 d-none">
+            Message sent successfully ✅
+          </div>
+
+
+
+
+            </div>
+          </div>
+
+          <button type="submit"  class="BTN w-10" >Send Message</button>
+
+        </form>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="CONTAINER   mb-5">
+  <center> 
+  <h3 text-center  class="location"> our Location</h3>
+</center>
+  <div class="road-container"> 
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d31690.694251895682!2d7.380204790786264!3d6.850172171171334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shilltop%20nsukka%20!5e0!3m2!1sen!2sng!4v1775062683401!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+
+    </iframe>
+  </div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %} <section class="container mt-5 mb-5">
+  <div class="row justify-content-center">
+
+    <div class="col-lg-6 sm-4">
+
+      <div class="card shadow p-4">
+        <h3 class="text-center mb-4 fw-bold">Contact Us</h3>
+
+        <form method="POST">
+          {% csrf_token %}
+
+          <!-- Name -->
+          <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" name="name" placeholder="Enter your name" required>
+          </div>
+
+          <!-- Email -->
+          <div class="mb-3">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-control" name="email" placeholder="Enter your email" required>
+          </div>
+
+          <!-- Message -->
+          <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea class="form-control" name="message" rows="4" placeholder="Type your message..." required></textarea>
+          </div>
+
+          <!-- Checkbox (Services) -->
+          <div class="mb-3">
+            <label class="form-label">Select Service</label>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="service" value="Fitness Training">
+              <label class="form-check-label">Fitness Training</label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="service" value="Diet Plan">
+              <label class="form-check-label">Diet Plan</label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="service" value="Personal Coaching">
+              <label class="form-check-label">Personal Coaching</label>
+            </div>
+          </div>
+
+          <!-- Terms Checkbox -->
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" required>
+            <label class="form-check-label">
+              I agree to terms and conditions
+            </label>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" class="btn btn-danger w-100">
+            Send Message
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+</section> {% endcomment %}
+
+
+
+
+
+
+
+{% endblock %}

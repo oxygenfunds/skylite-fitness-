@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container  py-5">
+    <div class="row">
+        {% for trainer in trainers %}
+        <div class="col-lg-8 col-md-6 mb-4 sm-4">
+            <div class="card">
+                <img src="{{ trainer.image.url }}" class="img-fluid">
+                <div class="text-center p-3">
+                    <h5>{{ trainer.name }}</h5>
+                    <p>{{ trainer.role }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

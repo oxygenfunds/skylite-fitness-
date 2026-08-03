@@ -2,19 +2,147 @@
 {% load static %}
 
 {% block content %}
-<div class="container  py-5">
+ <div class="container-fluid py-5 px-3 ">
     <div class="row">
         {% for trainer in trainers %}
-        <div class="col-lg-8 col-md-6 mb-4 sm-4">
-            <div class="card">
+        <div class="col-12 mb-2 sm-justify-content-center">
+            
+       <!--- image -->
+
+            <div class="card-trainers">
                 <img src="{{ trainer.image.url }}" class="img-fluid">
+
                 <div class="text-center p-3">
-                    <h5>{{ trainer.name }}</h5>
-                    <p>{{ trainer.role }}</p>
+                      <h5>{{ trainer.name }}</h5>
+                    <p>{{ trainer.role }}</p>   
+
+                    <div class="col-md-10-mx-auto">
+                        <div class="trainer-info">
+
+                            <span class="badge bg-danger mb-2 btn-md">
+                                ⭐⭐⭐⭐⭐ Top Trainers
+                            </span>
+
+                            {% comment %} <h2>{{ trainer.name }}</h2>
+
+                            <h6>{{ trainer.role }}</h6> {% endcomment %}
+
+                            <p class="experience">
+                                 5+ Years Experience
+                            </p>
+
+
+                              <p class="description">
+                                Certified fitness instructor passionate about
+                                helping clients build strength, improve endurance
+                                and achieve their dream physique.
+                            </p>
+
+
+                            <button class="btn-skip btn btn-sm">
+                                📅 Book Session
+                            </button>
+
+
+                        </div>
+
+                    </div> 
+
                 </div>
             </div>
         </div>
+
+{% empty %}
+  <div class="text-center py-5">
+
+            <h3>No trainer found </h3>
+
+            <p>Try searching another trainer or Energy supplement .</p>
+
+        </div>
+
         {% endfor %}
     </div>
-</div>
+</div> 
+
+
+
+
+{% comment %} <div class="container py-5">
+
+    <div class="row justify-content-center">
+
+        {% for trainer in trainers %}
+
+        <div class="col-12 mb-5">
+
+            <div class="trainer-card shadow">
+
+                <div class="row g-0 align-items-center">
+
+                    <!-- Image -->
+                    <div class="col-md-4">
+
+                        <img src="{{ trainer.image.url }}"
+                             class="trainer-image"
+                             alt="{{ trainer.name }}">
+
+                    </div>
+
+                    <!-- Details -->
+                    <div class="col-md-8">
+
+                        <div class="trainer-info">
+
+                            <span class="badge bg-danger mb-2">
+                                ⭐ Top Trainer
+                            </span>
+
+                            <h2>{{ trainer.name }}</h2>
+
+                            <h6>{{ trainer.role }}</h6>
+
+                            <p class="experience">
+                                ⭐ 5+ Years Experience
+                            </p>
+
+                            <p class="description">
+                                Certified fitness instructor passionate about
+                                helping clients build strength, improve endurance
+                                and achieve their dream physique.
+                            </p>
+
+                            <button class="btn btn-danger btn-lg">
+                                📅 Book Session
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% empty %}
+
+        <div class="text-center py-5">
+
+            <h3>No trainer found 😔</h3>
+
+            <p>Try searching another trainer.</p>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div> {% endcomment %}
+
+
+
+
 {% endblock %}

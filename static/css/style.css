@@ -20,13 +20,9 @@ header {
    background: linear-gradient(120deg, #0f2027 50%, #ff004f 50%);
     width: 100%;
     top: 0;
-    
-    padding:  2px;
-    
-    /* text-align: center; */
+    padding:  2px; 
+   
 }
- 
-
 .logo span {
     font-size: 24px;
     font-weight: bold;
@@ -40,7 +36,10 @@ header {
     font-weight: bold;
     color: var(--ash);
 }
-
+.trainers h1 {
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+}
 nav a {
     color: var(--ash);
     text-decoration: none;
@@ -62,10 +61,15 @@ footer {
     padding: 10px 0;
 }
 .container {
-    width: 400px;
+    width: 300px;
     margin: 50px ;
     border-radius: 8px;
     background: var(--secondary-color);
+}
+.container-fluid {
+   
+    background: var(--secondary-color);
+    box-shadow: 0 10px 25px rgba(1.0,0.1,0.1,1.8);
 }
 .navbar-brand a {
     font-weight: 800;
@@ -362,30 +366,6 @@ button:focus{
     animation: fadeUp 1s ease forwards;
 }
 
-/* .contain{
-    margin-top: 20px;
-    padding: 20px 6%;
-}
-.us {background: var(--modern);
-   
-}
-.us:hover{
-    background: var(--ash);
-    color: var(--secondary-color);
-    transform: skew(7deg);
-    transition: 0.5s;
-}
-.us h5 {
-    color: var(--secondary-color);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-.us  p {
-    color: var(--secondary-color);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-} */
-
-
-
 @keyframes fadeUp {
     to {
         opacity: 1;
@@ -541,7 +521,6 @@ border-radius: 10px;
     border-radius: 10px;
     transform: skew(18deg);
 
-
 }
 .content a {
     text-decoration: none;
@@ -564,20 +543,22 @@ border-radius: 10px;
     margin-left: 200px;
 }
 
-.trainer-card {
+.card-trainers {
     position: relative;
     overflow: hidden;
+    transition: 3s ease;
+    margin-bottom: 20px;
 }
-.trainer-card img {
+/* .trainer-card img {
     width: 100%;
     height: auto;
     display: block;
     transition: transform 0.3s ease;
     border-radius: 5px;
     transform: skewY(-4deg);
-}
-.trainer-card:hover img {
-    transform: scale(1.05) skewY(-14deg);
+} */
+.card-trainers:hover img {
+    /* transform: scale(1.05) skewY(-1deg); */
     cursor: pointer;
     transition: 0.4s;
 }
@@ -595,28 +576,77 @@ border-radius: 10px;
     font-size: 1.2rem;
     transition: color 0.3s ease;
 }
-.trainer-info {
+/* .trainer-info {
     margin-top: 10px;
     padding: 15px;
     background-color: var(--ash);
+} */
+
+ .trainer-info{
+    padding:35px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    height:100%;
 }
-.trainer-info:hover {
+ .trainer-info h2{
+    font-size:2rem;
+    font-weight:700;
+    /* color: var(--primary-color); */
+    color: var(--secondary-color);
+    margin-bottom:10px;
+}
+.trainer-info h6{
+    color:var(--secondary-color);
+    font-size:1.1rem;
+    font-weight:600;
+    margin-bottom:15px;
+}
+.experience{
+    color:var(--ash);
+    font-weight:600;
+    font-size:2.1rem;
+    margin-bottom:18px;
+}
+.description{
+    color:var(--ash);
+    line-height:1.8;
+    margin-bottom:25px;
+}
+.btn-skip {
+    text-decoration: none;
+    color: var(--ash);
+    background-color: var(--modern);
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 2.1rem;
+    width: content;
+}
+.badge{
+    width:max-content;
+    font-size:.9rem;
+    padding:8px 15px;
+    border-radius:50px;
+}
+/* .trainer-info:hover {
    
-    color: var(--secondary-color);
     transition: 0.5s;
-    transform: skew(5deg);
-}
-.trainers h6 {
-    color: var(--secondary-color);
-    font-size: 2.0rem;
+    transform: skew(1deg);
+} */
+.text-center h5  {
+    /* color:  var(--primary-color); */
+    color: var(--ash);
+    font-size: 2.5rem;
+    font-weight: 700;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: solid;
     text-shadow: 10px 10px 20px var(--primary-color);
 }
-.trainers h1 {
+.text-center h1 {
     color: var(--modern);
     font-size: 1.3rem;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+     'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .why-us-info {
     margin-top: 10px;
@@ -717,9 +747,65 @@ ul li a {
     margin-bottom: 40px; 
 }
 
+/*   SMALL SCREEN DEVICES  */
 @media(max-width:768px) {
     .road-map iframe {
         width: 100%;
         height: 280px;
     }
+    .card-trainers {
+        text-align: center;
+
+    }
+    .trainer-image {
+
+    min-height:280px;
 }
+.trainer-info{
+    padding:20px;
+}
+
+}
+/*  LARGE BIG SCREENS  */
+@media(min-width:1400px){
+
+.container{
+    max-width:1320px;
+}
+.container-fluid{
+    max-width:1300px;
+}
+
+/* for tablet screens  */
+} 
+@media(min-width:1200px){ 
+    .card-trainers {
+        min-height: 430px;
+    }
+    .trainer-info {
+        padding: 42px;
+    }
+
+}
+
+@media(min-width:991px) {
+    .hero-1 {
+        padding: 80px 10%;
+    }
+    .features {
+        gap: 30px;
+    }
+
+    .trainer-image{
+    min-height:290px;
+}
+
+.trainer-info{
+    padding:25px;
+}
+
+.trainer-info h2{
+    font-size:1.7rem;
+}
+}
+

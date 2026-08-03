@@ -8,27 +8,16 @@ BMI Calculator
 
 {% block content %}
 
-{% comment %} <div class="container">
-   <div class="cal-O"> <h1>BMI Calculator (BODY MASS INDEX)</h1> </div>
-
-    <form method="POST" class="POST-BIM">
-        {% csrf_token %}
-        <label>Weight (kg)</label>
-        <input type="number" name="weight" required>
-
-        <label>Height (m)</label>
-        <input type="number" name="height" required>
-
-        <button type="submit">Calculate</button>
-    </form>
-
-    {% if bmi %}
-        <h2>Your BMI is {{ bmi }}</h2>
-    {% endif %}
-</div> {% endcomment %}
 
 
-<div class="container col-lg-6 col-md-8 col-sm-10 py-5">
+
+<h1>DEBUG BMI: {{ bmi }}</h1>
+
+<h1 style="color:red;">THIS IS MY BMI PAGE</h1>
+
+
+
+<div class="container-fluid col-lg-6 col-md-8 col-sm-10 py-5 px-">
 
     <div class="text-center mb-4">
         <h2 class="fw-bold">BMI Calculator</h2>
@@ -40,11 +29,11 @@ BMI Calculator
 
             <div class="card shadow p-4">
 
-                <form method="POST"   action="{% url 'index' %}"  class="POST-BMI">
+                {% comment %} <form method="POST"   action="{% url 'index' %}"  class="POST-BMI">
                     {% csrf_token %}
 
-                    
-                    <!-- Weight -->
+                    <h1>{{test}} </h1>
+                   
                     <div class="  CALCULATOR">
                         <label class="form-label">Weight (kg)</label>
                         <input type="number" step="0.1" name="weight" class="form-control" required>
@@ -56,14 +45,25 @@ BMI Calculator
                         <input type="number" step="0.01" name="height" class="form-control" required>
                     </div>
 
-                    <button type="submit" >
+                    <button type="submit" class="btn btn-danger w-100 mt-3"  >
                         Calculate BMI
                     </button>
 
-                </form>
+                </form> {% endcomment %}
+
+                <h1>DEBUG BMI: {{ bmi }}</h1>
+
+<form method="POST" action="{% url 'bmi' %}">
+    {% csrf_token %}
+
+    <input type="number" name="weight" placeholder="weight" required>
+    <input type="number" name="height" placeholder="height" required>
+
+    <button type="submit">Calculate</button>
+</form>
 
                 <!-- RESULT -->
-                {% if bmi %}
+                {% if bmi is not None %}
                     <div class="alert alert-success mt-4 text-center">
                         <h5>Your BMI: {{ bmi }}</h5>
 
@@ -92,16 +92,6 @@ BMI Calculator
     </div>
 
 </div>
-
-
-
-
-
-
-
-
-
-
 
 
 

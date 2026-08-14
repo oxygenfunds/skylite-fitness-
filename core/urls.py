@@ -32,6 +32,10 @@ urlpatterns = [
     path('index/', views.bmi, name='bmi'),
 
     path('trainers/', views.trainers, name='trainers'),
+    
+    # path('signin/', views.signin, name='signin'),
+    
+    path('blog/', views.blog, name='blog'),
 ]
 
 

@@ -153,6 +153,10 @@ def bmi(request):
 
 def home(request):
     return render(request, 'home.html')
+
+# blog page 
+def blog(request):
+    return render(request, 'blog.html')
     
 
 

@@ -14,7 +14,7 @@ body {
     --text-color: #fafa11;
     --modern:#161E54;
     --ash:#fafafa;
-    --pink:#ff3c78
+    --pink:#ff3c78;
 }
 header {
    background: linear-gradient(120deg, #0f2027 50%, #ff004f 50%);
@@ -128,7 +128,50 @@ footer {
     transform: translateY(-10px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
+/* About page*/
 
+/* .trainers-ab h6 {
+    margin-top: 15px;
+    font-size: 3.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: capitalize;
+    color: var(--secondary-color);
+}
+.trainers-home{
+   
+    font-size: 3.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: capitalize;
+    
+} */
+.trainers-home h6 {
+    margin-top: 15px;
+    font-size: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: capitalize;
+    color: var(--secondary-color);
+}
+.trainers-home h1 {
+    margin-top: 15px;
+    font-size: 2.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: capitalize;
+    color:var(--modern)
+}
+.trainers-hm-blog {
+    margin-top: 15px;
+    font-size: 3.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: capitalize;
+    color: var(--secondary-color);
+}
+.trainers-hm-blog h6 {
+    margin-top: 1px;
+    font-size: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform:capitalize;
+   color:var(--modern);
+}
 
 .GET h2 {
     color: var(--secondary-color);
@@ -192,7 +235,6 @@ footer {
     margin-right: 5rem;
     color: var(--secondary-color);
 }
-
 
 form input {
     padding: 30px  2px;
@@ -300,6 +342,7 @@ button:focus{
     margin-top: 30px;
 }
 
+
 .btn {
     padding: 12px 25px;
     margin-right: 10px;
@@ -402,7 +445,6 @@ button:focus{
     color: var(--secondary-color);
     /* background: var(--modern); */
    
-   
     justify-content: space-between;
     transition: all 0.5s ease;
 }
@@ -414,7 +456,6 @@ button:focus{
     background:    linear-gradient(120deg, #0f2027 50%, #ff004f 50%);
     transition: 1s;
     transform: skewY(-10px );
-
 }
 
 .contact-kiss {
@@ -468,9 +509,10 @@ border-radius: 10px;
     width: 80px;
     height: 50px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    background: linear-gradient(80deg,  #ff004f 100%);
-     transform: skew(7deg);
+    background: linear-gradient(84deg,  #ff004f 100%);
+    transform: skew(7deg);
     transition: 0.5s;
     cursor: pointer;
 } 
@@ -698,6 +740,107 @@ border-radius: 10px;
     justify-content: center;
     font-size: 1.8rem;
 }
+/* dashboard page  */
+.dashboard-page {
+    min-height: 80vh;
+    padding-bottom: 60px;
+}
+.dashboard-welcome {
+    padding-top: 20px;
+}
+.dashboard-welcome h1 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-color);
+    font-family:  monospace, Arial, Helvetica, sans-serif;
+}
+.dashboard-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.welcome-text {
+    font-size: 1.8rem;
+    max-width: 650px;
+}
+/* features card  */
+.dashboard-card {
+    height: 100%;
+    padding: 30px;
+    border-radius: 33px;
+    background: var(--ash);
+    border: 1px solid var(--text-color);
+    box-shadow: 0 5px 23px rgba(0, 5, 0, 4.8);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s,
+        box-shadow 0.3s ease;
+}
+.dashboard-card:hover{
+    transform: translateY(-4);
+    cursor: pointer;
+    box-shadow: 0 14px 30px rgba(0,0,0,10);
+}
+.dashboard-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    background: var(--modern);
+    font-size: 1.8;
+    margin-bottom: 20px;
+}
+.dashboard-card p {
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* card button  */
+.dashboard-btn  {
+    display: inline-block;
+    margin-top: auto;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+.dashboard-btn:hover {
+    transform: translateY(-3px);
+}
+/* BOTTOM  */
+.dashboard-bottom {
+    padding:40px;
+    border-radius: 20px;
+    background: var(--secondary-color);
+}
+.dashboard-bottom h2 {
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: var(--ash);
+    margin-bottom: 20px;
+}
+.dashboard-bottom p {
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+
+.dashboard-main-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+
+
+
+
 
 /* FOOTER  */
 footer {
@@ -747,7 +890,7 @@ ul li a {
     margin-bottom: 40px; 
 }
 
-/*   SMALL SCREEN DEVICES  */
+/*   SMALL SCREEN DEVICES/ mobile devices   */
 @media(max-width:768px) {
     .road-map iframe {
         width: 100%;
@@ -763,6 +906,21 @@ ul li a {
 }
 .trainer-info{
     padding:20px;
+}
+.icon-img {
+    background: var(--secondary-color);
+}
+.dashboard-welcome h1 {
+    font-size: 2rem;
+}
+.dashboard-card {
+    padding: 25px;
+}
+.dashboard-bottom {
+    padding: 25px;
+}
+.dashboard-bottom h2 {
+    font-size: 1.8rem;
 }
 
 }

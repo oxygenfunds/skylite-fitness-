@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+{% load static %}  
+
+{% block title  %}
+Dashboard | Skylite Fitness
+{% endblock %}
+
+{% block content %}
+
+<section class="dashboard-page">
+
+    <div class="Container py-5">
+
+        <!-- Welcome Section -->
+        <div class="dashboard-welcome mb-5">
+
+            <p class="dashboard-label">
+                YOUR DASHBOARD
+            </p>
+
+            <h1>
+                Hi {{ user.first_name|default:user.username }} 👋
+            </h1>
+
+            <p class="welcome-text">
+                Welcome back to Skylite Fitness.
+                Let's keep working towards your fitness goals.
+            </p>
+
+        </div>
+
+
+        <!-- Main Features -->
+        <section>
+
+            <div class="row g-4">
+
+                <!-- BMI -->
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-icon">
+                            
+                            
+                        </div>
+
+                        <h3>BMI Calculator</h3>
+
+                        <p>
+                            Check your Body Mass Index and get
+                            a quick look at your current fitness status.
+                        </p>
+
+                        <a href="{% url 'bmi' %}"
+                           class="dashboard-btn">
+                            Calculate BMI →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Trainers -->
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-icon">
+                            🏋️
+                        </div>
+
+                        <h3>Find a Trainer</h3>
+
+                        <p>
+                            Discover trainers based on their role,
+                            experience and area of expertise.
+                        </p>
+
+                        <a href="{% url 'trainers' %}"
+                           class="dashboard-btn">
+                            Find a Trainer →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Blog -->
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-icon">
+                            📚
+                        </div>
+
+                        <h3>Fitness Blog</h3>
+
+                        <p>
+                            Explore cardio, nutrition, strength
+                            and conditioning content.
+                        </p>
+
+                        <a href="#" class="dashboard-btn">
+                            Explore Blog →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Bottom Section -->
+        <section class="dashboard-bottom mt-5">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-8">
+
+                    <p class="dashboard-label">
+                        YOUR FITNESS JOURNEY
+                    </p>
+
+                    <h2>
+                        Small steps. Consistent progress.
+                    </h2>
+
+                    <p>
+                        Whether you're working on your cardio,
+                        nutrition or strength, Skylite Fitness
+                        is here to help you stay on track.
+                    </p>
+
+                </div>
+
+                <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+
+                    <a href="{% url 'trainers' %}"
+                       class="dashboard-main-btn">
+                        Start Exploring →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</section>
+
+{% endblock %}

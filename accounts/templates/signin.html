@@ -117,12 +117,13 @@
             <div class="card shadow p-4">
 
                 <h2 class="text-center fw-bold mb-2">
-                    Welcome Back
+                    Welcome! 
                 </h2>
 
                 <p class="text-center text-muted mb-4">
                     Sign in to Skylite Fitness
-                </p>
+                </p> 
+                <h6> You need to signin or signup  before continuing </h6>
 
                 {% if messages %}
                     {% for message in messages %}
@@ -167,14 +168,15 @@
                     </button>
 
                 </form>
-
+                <div class="bottom-bottom">
                 <p class="text-center mt-4 mb-0">
                     Don't have an account?
 
-                    <a href="{% url 'signup' %}">
-                        Create Account 
+                 <a href="{% url 'signup' %}">
+                    Create Account 
                     </a>
                 </p>
+            </div>
 
             </div>
 

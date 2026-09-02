@@ -1,6 +1,7 @@
 "use strict";
 
 
+
 console.log("Hello World!");
 
 
@@ -46,7 +47,7 @@ console.log("🔥 JS CONNECTED");
 // }
 // ,{treshold:0.2});
 
-
+// alert("Hello World!");
 
 
 // document.getElementById("contact-form").addEventListener("submit",
@@ -83,7 +84,7 @@ console.log("🔥 JS CONNECTED");
     
 // } )    
 
-alert("js works");
+
 
 // document.addEventListener("DOMContentLoaded", function () {
 
@@ -119,7 +120,26 @@ alert("js works");
 
 //     }
 
-// });
+
+
+const accordionHeaders = document.querySelectorAll(".accordion-header");
+
+accordionHeaders.forEach((header) => {
+
+    header.addEventListener("click", () => {
+
+        const body = header.nextElementSibling;
+
+        header.classList.toggle("active");
+
+        if (body.style.maxHeight) {
+            body.style.maxHeight = null;
+        } else {
+            body.style.maxHeight = body.scrollHeight + "px";
+        }
+
+    });
+
+});
 
     
-   

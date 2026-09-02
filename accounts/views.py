@@ -24,9 +24,6 @@ def logout_user(request):
     return redirect("home")
  
 
-
-
-
 def signin(request):
     
     if request.method == "POST":

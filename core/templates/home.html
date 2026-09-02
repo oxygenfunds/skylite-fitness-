@@ -24,10 +24,10 @@
 
   </div>
 
-  <div class="icon-img me-3">
+  {% comment %} <div class="icon-img me-3">
      <img src="{% static 'images/icon-2.png' %}" class="img-fluid">
 
-</div>
+</div> {% endcomment %}
     
   <div class="fw-bold"> 
     <h6> Free Fitness Training </h6>
@@ -51,23 +51,7 @@
     </div>
 </section>
 
-{% comment %} <section class="features">
-    <div class="feature">
-        <h3>Professional Guidance</h3>
-        <p>Expert-driven health analytics and wellness tracking.</p>
-    </div>
 
-    <div class="feature">
-        <h3>Smart BMI Analysis</h3>
-        <p class="feature">Instant feedback on your health status.</p>
-    </div>
-
-    <div class="feature">
-        <h3>Corporate Plans</h3>
-        <p>Customized wellness programs for organizations.</p>
-    </div>
-
-</section> {% endcomment %}
 
 <section class="about"> 
     <div class="best">
@@ -153,10 +137,6 @@
 
     <div class="CONTAINER">
         <div class="col-lg-4">
-
-            {% comment %} <div class="hero-image">
-        <img src="{% static 'images/about-2.png' %}" alt="Trainer" class="img-fluid">
-    </div> {% endcomment %}
             
             <div class="featuring-box d-flex align-items-start- mb-4">
                 <div class="iconE-box"> 
@@ -190,11 +170,8 @@
                     <p> achieve you fitness goals with us  </p>
                 </div>
 
-                {% comment %} <img src="{% static 'images/fitness-goal-banner.png' %}"  class="img-fluid"> {% endcomment %}
         </div> 
 
-
-             
         <div class="content">
            <a href="#" class="">Join us</a>
          </div>
@@ -223,13 +200,6 @@
 
 <img src="{% static 'images/team-1.jpg' %}" class="img-fluid">
 
-<div class="trainer-social">
-<a href="#">F</a>
-<a href="#">T</a>
-<a href="#">I</a>
-<a href="#">L</a>
-</div>
-
 <div class="trainer-info text-center">
 <h6 class="fw-bold">Jessica </h6>
 {% comment %} <p class="text-muted small">Fitness Coach</p> {% endcomment %}
@@ -244,12 +214,12 @@
 
 <img src="{% static 'images/team-2.jpg' %}" class="img-fluid">
 
-<div class="trainer-social">
+{% comment %} <div class="trainer-social">
 <a href="#">F</a>
 <a href="#">T</a>
 <a href="#">I</a>
 <a href="#">L</a>
-</div>
+</div> {% endcomment %}
 
 <div class="trainer-info text-center">
  <h6 class="fw-bold">Kingsley Ben-Adir </h6>   
@@ -266,12 +236,12 @@
 
 <img src="{% static 'images/team-3.jpg' %}" class="img-fluid">
 
-<div class="trainer-social">
+{% comment %} <div class="trainer-social">
 <a href="#">F</a>
 <a href="#">T</a>
 <a href="#">I</a>
 <a href="#">L</a>
-</div>
+</div> {% endcomment %}
 
 <div class="trainer-info text-center"> 
 
@@ -291,12 +261,7 @@
 
 <img src="{% static 'images/team-4.jpg' %}" class="img-fluid">
 
-<div class="trainer-social">
-<a href="#">F</a>
-<a href="#">T</a>
-<a href="#">I</a>
-<a href="#">L</a>
-</div>
+
 
 <div class="trainer-info text-center">
 
@@ -310,86 +275,89 @@
 </div>
 
 </div>
-
-        
+  
 </section>
 
-{% comment %} <section class="why-choose-us">
-     <center class="trainers-hm-blog">
-        <h6>Our Blog</h6>
-       
-        <p class="lead"> 
-            check our Lattest blog for the latest fitness tips. 
-        </p>
-        </center>
+   <section class="faq-section ">
+         <a href="{/home}" class="back-arrow">
+            {% comment %} <i class="fa-solid fa-arrow-up"></i> {% endcomment %}  
+        </a> 
 
-    <div class="row g-4">
-        
-       
+        <h1 class="H-txt">Frequently Asked Questions</h1>
+ 
+        <div class="accord-wrapper d-flexx">
+            <div class="accordion" id="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">What services does SKYLITE provide?</button>
+                    <div class="accordion-body">
+                        <p>SKYLITE offers a range of fitness services including personal training, group classes, nutrition counseling, and wellness consultations.</p>
+                    </div>
+                </div>
 
-       <div class="col-lg-3 col-md-6">
-<div class="trainer-card">
+                <div class="accordion-item">
+          
+                    <button class="accordion-header">How can I book a personal training session?</button>
+                    <div class="accordion-body">
+                        <p>You can book our services through our website by clicking on the "Get Started" button or by contacting our customer service team.</p>
+                    </div>
+                </div>
 
-<img src="{% static 'images/work-1.jpg' %}" class="img-fluid">
+                <div class="accordion-item">
+                    <button class="accordion-header">Are your fitness professionals qualified?</button>
+                    <div class="accordion-body">
+                        <p>Yes, all our fitness professionals are licensed and experienced in their respective fields to ensure you receive the best training possible.</p>
+                    </div>
+                </div>
 
+                <div class="accordion-item">
+                    <button class="accordion-header">What areas do you serve?</button>
+                    <div class="accordion-body">
+                        <p>We currently serve multiple locations. Please check our website or contact us for specific area coverage.</p>
+                    </div>
+                </div>
 
-<div class="trainer-info text-center">
-<h6 class="">At home   </h6>
-<p class="">always train </p>
-</div>
+                   <div class="accordion-item">
+                    <button class="accordion-header">Can beginners use SKYLITE services?</button>
+                    <div class="accordion-body">
+                        <p> Absolutely, Skylite is designed for people at different Fitness levels, 
+                            inclluding beginners, you can start with a simple routines and gradually increase the 
+                            intensity as your strength, endurance and confidence improve.
+                        </p>
+                    </div>
+                </div>
 
-</div>
-</div>
+            
+        </div>
 
-<div class="col-lg-3 col-md-6">
-<div class="trainer-card">
-
-<img src="{% static 'images/work-2.jpg' %}" class="img-fluid">
-
-<div class="why-us-info text-center">
-<h6 class="">full body home workout </h6>
-<p class="">always keep fit </p>
-</div>
-
-</div>
-</div>
-
-
-<div class="col-lg-3 col-md-6">
-<div class="trainer-card">
-
-<img src="{% static 'images/work-3.jpg' %}" class="img-fluid">
-
-<div class="why-us-info text-center">
-<h6 class="">Strength </h6>
-<p class="">Transform your life with our personalized fitness plans</p>
-</div>
-
-</div>
-</div>
-
-
-<div class="col-lg-3 col-md-6">
-<div class="trainer-card">
-
-<img src="{% static 'images/work-4.jpg' %}" class="img-fluid">
-
-
-<div class="why-us-info text-center">
-<h6 class="">mental engagement </h6>
-<p class=""> keeping fit is the right choice</p>
-</div>
-
-</div>
-</div>
-
-</div>
-
-
-</section> {% endcomment %}
-
+         <div class="accord-image ">
+            {% comment %} <img src="{% static 'images/carousel-1.jpg' %}" 
+            alt="Frequently Asked Questions" > {% endcomment %}
+                 
+            </div>
+    </section>
 
 
 </body>
+<script src="{% static 'js/scripts.js' %}">
+    const accordionHeaders = document.querySelectorAll(".accordion-header");
+
+accordionHeaders.forEach((header) => {
+
+    header.addEventListener("click", () => {
+
+        const body = header.nextElementSibling;
+
+        header.classList.toggle("active");
+
+        if (body.style.maxHeight) {
+            body.style.maxHeight = null;
+        } else {
+            body.style.maxHeight = body.scrollHeight + "px";
+        }
+
+    });
+
+});
+</script>
 
 {% endblock %}

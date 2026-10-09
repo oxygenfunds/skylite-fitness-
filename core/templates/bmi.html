@@ -10,10 +10,13 @@ BMI Calculator
 
 
 
+<div class="Aged-18 " >
+<p>Are you Aged 18 or over ? </p> {{ bmi }}
 
-<h1>DEBUG BMI: {{ bmi }}</h1>
-
-<h1 style="color:red;">THIS IS MY BMI PAGE</h1>
+<h2 style="color:red;" class="individual">Note this tool will only provide an accurate Bmi 
+    result <br> for individual aged 18 and over.  
+</h2>
+</div>
 
 
 
@@ -69,7 +72,7 @@ BMI Calculator
 
                         {% if bmi < 18.5 %}
                             <p class="text-warning">Underweight</p>
-                        {% elif bmi < 20 %}
+                        {% elif bmi < 25 %}
                             <p class="text-success">Normal weight</p>
                         {% elif bmi < 30 %}
                             <p class="text-warning">Overweight</p>

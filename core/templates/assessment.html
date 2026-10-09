@@ -1,0 +1,145 @@
+{% extends "base.html"%}
+{% load static %}
+
+{% block title %}
+Fitness Assessment | Skylite Fitness
+{% endblock %}
+
+{% block content %}
+
+<section class="assessment-section">
+
+    <div class="assessment-container">
+
+        <p class="assessment-label">
+            SKYLITE FITNESS
+        </p>
+
+        <h1 class="access-me">Fitness Assessment</h1>
+
+        <p>
+            Help us understand your fitness goals and preferences.
+        </p>
+
+       {% comment %} assessment card  {% endcomment %}
+
+
+<form method="POST"  class="assessment-card">
+    {% csrf_token %}
+
+    {% for item in questions %}
+
+        <div
+            class="assessment-question"
+            {% if not forloop.first %}style="display: none;"{% endif %}
+        >
+
+            <p class="question-number">
+                Question {{ forloop.counter }} of {{ questions|length }}
+            </p>
+
+            <h2>
+                {{ item.question }}
+            </h2>
+
+            <div class="assessment-options">
+
+                {% for option in item.options %}
+
+                    <label class="assessment-option">
+
+                        <input
+                            type="radio"
+                            name="question_{{ forloop.parentloop.counter }}"
+                            value="{{ option }}"
+                        >
+
+                        <span>
+                            {{ option }}
+                        </span>
+
+                    </label>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+    {% endfor %}
+
+    <button
+        type="submit"
+        id="next-question"
+        class="assessment-next-btn"
+    >
+        Next
+    </button>
+
+</form>
+
+
+    </div>
+
+</section>
+
+<script>
+
+    {% comment %} const questions = document.querySelectorAll(".assessment-question");
+
+    const nextButton = document.getElementById("next-question");
+
+    let currentQuestion = 0;
+
+
+    nextButton.addEventListener("click", function () {
+
+        questions[currentQuestion].style.display = "none";
+
+        currentQuestion++;
+
+        if (currentQuestion < questions.length) {
+
+            questions[currentQuestion].style.display = "block";
+
+        }
+        
+       
+
+    }); {% endcomment %}
+
+     const questions = document.querySelectorAll(".assessment-question");
+
+    const nextButton = document.getElementById("next-question");
+
+    let currentQuestion = 0;
+
+
+    nextButton.addEventListener("click", function (event) {
+
+        if (currentQuestion < questions.length - 1) {
+
+            event.preventDefault();
+
+            questions[currentQuestion].style.display = "none";
+
+            currentQuestion++;
+
+            questions[currentQuestion].style.display = "block";
+
+            if (currentQuestion === questions.length - 1) {
+                nextButton.textContent = "Submit Assessment";
+            }
+
+        }
+
+    });
+
+
+   
+
+
+</script>
+
+
+{% endblock %}

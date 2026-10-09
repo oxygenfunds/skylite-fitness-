@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     
     'core',
     'accounts'
+    
 ]
 
 MIDDLEWARE = [
@@ -100,6 +101,9 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+    # EMAIL SETTINGS
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
 
 
 # Internationalization

@@ -19,7 +19,7 @@ Dashboard | Skylite Fitness
             </p>
 
             <h1>
-                Hi {{ user.first_name|default:user.username }} 👋
+                Hello {{ user.first_name|default:user.username }} 👋 we love {{ user.first_name|default:user.username }}!
             </h1>
 
             <p class="welcome-text">
@@ -104,7 +104,7 @@ Dashboard | Skylite Fitness
                             and conditioning content.
                         </p>
 
-                        <a href="#" class="dashboard-btn">
+                        <a href="{% url 'blog' %}" class="dashboard-btn">
                             Explore Blog →
                         </a>
 

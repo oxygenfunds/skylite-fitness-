@@ -31,21 +31,25 @@
 
 <body>
      
-
+<header>
 
 <nav class="navbar navbar-expand-lg  main-nav shadow-sm">
      
       <a class="navbar-brand fw-bold text-danger" href="/home">
-         Skylite Fitness
+        <img src="{% static 'images/logo.jpg' %}" alt="Logo" class="logo">
       </a>
 
- 
-       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"> 
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                       data-bs-target="#navbarNav"
+                         aria-controls="navbarNav"
+                         aria-expanded="false"
+                        aria-label="Toggle navigation"
+                      data-bs-target="#navbarNav">
 
+    <span class="navbar-toggler-icon"></span>
+      </button>
      
-      <div class=" container  collapse navbar-collapse" id="navbarNav">
+      <div class=" collapse  collapse navbar-collapse" id="navbarNav">
 
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="/home">Home</a></li>
@@ -58,12 +62,20 @@
               Pages
             </a>
             <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
-              <li><a class="dropdown-item" href="{% url 'signin' %}">Signin</a></li>
+              {% if user.is_authenticated %} 
+              <li><a class="dropdown-item" href="{% url 'dashboard' %}">Dashboard</a></li>
               <li><a class="dropdown-item" href="{% url 'bmi' %}">BMI Calculation</a></li>
+              <li><a class="dropdown-item" href="{% url 'logout' %}">Sign Out</a></li>
+              {% else %}
+
+              <li><a class="dropdown-item" href="{% url 'signin' %}">Sign In</a></li>
+              <li><a class="dropdown-item" href="{% url 'signup' %}">Create Account </a></li>
+              <li><a class="dropdown-item" href="{% url 'bmi' %}">BMI Calculation</a></li>
+              
+              {% endif %}
             </ul>
           </li>
         </ul>
-
         
         <form class="d-flex" method="GET" action="{% url 'trainers' %}">
           <input class="form-control me-2" type="text" name="q" placeholder="Search trainers $ energy supliment " required>
@@ -75,7 +87,6 @@
     </div>
   </nav> 
  
-
    
 </header>
 
@@ -89,7 +100,13 @@
    <div class="footer-grid">
             <div class="footer-col">
                 <h2 style="margin-bottom: 20px;">SKYLITE FITNESS </h2>
-                <p>Leading the Way in Medical Excellence, Trusted Care.</p>
+                {% comment %} <p>Skylite Fitness is a leading fitness and wellness company 
+                  dedicated to helping individuals achieve their health and fitness goals.
+                   We offer a wide range of services, including personal training, 
+                   group fitness classes, nutrition counseling, and wellness programs.
+                    Our team of experienced trainers and nutritionists are committed to providing
+                     personalized guidance and support to help our clients lead healthier, happier 
+                     lives.</p> {% endcomment %}
             </div>
             <div class="footer-col">
                 <h4>Important Links</h4>
@@ -108,10 +125,13 @@
 
             </div>
             <div class="footer-col">
-                <h4>Newsletter</h4>
-                <input type="text"   id="email" placeholder="Enter your email" style="padding: 10px; border-radius: 4px; border: none; width: 100%;" required> <br>
+                <h4>Privacy and control</h4>
+                {% comment %} <input type="text"   id="email" placeholder="Enter your email" style="padding: 10px; border-radius: 4px; border: none; width: 100%;" required> <br>
                 <br>
-                <button type="submit" class="subscribe"> <a href="" class="subscribe"> Subscribe </a>  </button>
+                <button type="submit" class="subscribe"> <a href="" class="subscribe"> Subscribe </a>  </button> {% endcomment %}
+              <p> Terms and condition of use </p>
+              <p> Accessibility </p>
+              <p> Investor relation </p>
               </div>
         </div>
         <p style="text-align: center; border-top: 1px solid ; padding-top: 20px;">© 2026 Skylite Fitness | All Rights Reserved. Designed  by Knox </p>

@@ -122,9 +122,9 @@
 
                 <p class="text-center text-muted mb-4">
                     Sign in to Skylite Fitness
-                </p> 
-                <h6> You need to signin or signup  before continuing </h6>
-
+                </p>
+                <span> You need to signin or signup  before continuing </span>
+                    
                 {% if messages %}
                     {% for message in messages %}
                         <div class="alert alert-danger">
@@ -176,6 +176,14 @@
                     Create Account 
                     </a>
                 </p>
+
+                 <p class=" mt-4 mb-0">    
+
+                 <a href="{% url 'password_reset' %}">
+                    Forget Password ?
+                    </a>
+                </p>
+
             </div>
 
             </div>

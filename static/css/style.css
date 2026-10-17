@@ -1313,6 +1313,31 @@ Withdrawal to 0x95E51CeF33A8661523Dba1ed1A5830F17135AdcD
     background: var(--ash);
 
 }
+.password-wrapper {
+    display:flex;
+    align-items:center; 
+    gap:10px;
+}
+.password-wrapper input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 14px; ;
+}
+.toggle-password {
+    /* position:relative; */
+    /* right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 0;
+    line-height: 1; */
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
 .password-reset-container h1 {
     margin-bottom: 10px;
     font-size: clamp(1.8rem, 4vw, 2.5rem);

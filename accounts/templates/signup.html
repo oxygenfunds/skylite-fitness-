@@ -8,7 +8,7 @@ create account | sign
 
 {% block content %}
 
-
+<body>
 <section class="signup-section">
 
     <div class="signup-container">
@@ -22,7 +22,6 @@ create account | sign
                 Join Skylite and start your fitness journey.
             </p>
         </div>
-
 
         <form method="POST" class="signup-form">
 
@@ -40,7 +39,6 @@ create account | sign
                         placeholder="Enter your first name"
                         required>
                 </div>
-
 
                 <div class="form-group">
                     <label for="last_name">Last Name</label>
@@ -79,7 +77,7 @@ create account | sign
 
             <div class="form-group">
                 <label for="password">Password</label>
-
+                <div class="password-wrapper">
                 <input
                     type="password"
                     id="password"
@@ -87,14 +85,21 @@ create account | sign
                     placeholder="Create a password"
                     required
                 >
-            </div>
+                <button type="button" class="toggle-password" id="togglePassword" 
+                data-target="password" aria-label="show password">
+                    
+                👁️</i> </button>
+                </div>
 
+
+            </div>
 
             <div class="form-group">
                 <label for="confirm_password">
                     Confirm Password
                 </label>
 
+                <div class="password-wrapper">
                 <input
                     type="password"
                     id="confirm_password"
@@ -102,6 +107,13 @@ create account | sign
                     placeholder="Confirm your password"
                     required
                 >
+                <button type="button" class="toggle-password" id="togglePassword" 
+                data-target="confirm_password" aria-label="show password">
+                    
+                👁️</i> </button>
+                </div>
+
+
             </div>
 
 
@@ -110,7 +122,6 @@ create account | sign
             </button>
 
         </form>
-
 
         <div class="signup-footer">
 
@@ -126,5 +137,9 @@ create account | sign
     </div>
 
 </section>
+</body>
+
+
+   
 
 {% endblock %}

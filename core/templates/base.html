@@ -151,7 +151,7 @@
 
     document.addEventListener("DOMContentLoaded", function () {
 
-    console.log("🔥 JS Loaded Successfully");
+    console.log("🔥 JS Loaded Successfully coming ");
 
     const form = document.getElementById("contact-form");
 
@@ -184,6 +184,48 @@
     }
 
 });
+
+
+
+const accordionHeaders = document.querySelectorAll(".accordion-header");
+
+accordionHeaders.forEach((header) => {
+
+    header.addEventListener("click", () => {
+
+        const body = header.nextElementSibling;
+
+        header.classList.toggle("active");
+
+        if (body.style.maxHeight) {
+            body.style.maxHeight = null;
+        } else {
+            body.style.maxHeight = body.scrollHeight + "px";
+        }
+
+    });
+
+});
+
+
+
+
+
+
+document.querySelectorAll('.toggle-password').forEach(function(button) {
+    button.addEventListener('click', function() {
+        const input = document.getElementById(this.dataset.target);
+        const isHidden = input.type === 'password';
+
+        input.type = isHidden ? 'text' : 'password';
+        this.textContent = isHidden ? '🙈' : '👁️';
+        this.setAttribute(
+            'aria-label',
+            isHidden ? 'Hide password' : 'Show password'
+        );
+    });
+});
+
 
 
 

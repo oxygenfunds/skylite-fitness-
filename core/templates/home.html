@@ -444,8 +444,8 @@
 
 
 </body>
-<script src="{% static 'js/scripts.js' %}">
-    const accordionHeaders = document.querySelectorAll(".accordion-header");
+{% comment %} <script src="{% static 'js/scripts.js' %}">
+const accordionHeaders = document.querySelectorAll(".accordion-header");
 
 accordionHeaders.forEach((header) => {
 
@@ -464,6 +464,6 @@ accordionHeaders.forEach((header) => {
     });
 
 });
-</script>
+</script> {% endcomment %}
 
 {% endblock %}
